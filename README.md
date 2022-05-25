@@ -1,4 +1,4 @@
-# Password Validator
+# Password Validator :]
 
 Password Validator is a bash script that checks the follow reqeirmentes for the password:
 
