@@ -5,7 +5,16 @@ password=$1 # Insert the first argument to password varible.
 Green='\033[0;32m' 
 Red='\033[0;31m' 
 default='\033[0;0m'
-                
+
+# Create flag -f that read password from file.
+while getopts 'f:' OPTION; do
+        case "$OPTION" in
+                f)
+                password=$(<$OPTARG)
+                ;;
+        esac
+done                
+
 # Check of the password isnt less than 10.
 if [[ ${#password} -lt 10 ]];
 then
